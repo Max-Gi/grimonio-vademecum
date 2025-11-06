@@ -21,6 +21,7 @@ Questo grimorio è modulare, organico, e cresce con me.
 
 ## 📂 Sezioni Attive
 
+- [**Bolt/**](./bolt/) → Importante
 - [**ComfyUI/**](./comfy/) → Prompt, checkpoint, LoRA, flussi annotati
 - [**Supabase/**](./supabase/) → Tabelle, policy, query rituali, debug annotato
 
