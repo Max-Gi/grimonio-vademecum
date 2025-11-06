@@ -139,9 +139,45 @@ create table public.eventi (
 
 **Ultimo sigillo inciso: Secondo sigillo: il cerchio dei dati è stato tracciato**
 
-
 ---
+
+**Step-by-step testing from root**
+
+Questo è un percorso chiaro e ripetibile per testare lo script dalla root, poi archiviarlo nel Grimonio.
+
 
 ✨ Con questa struttura, la sezione Supabase del tuo grimonio è completa, annotata e coerente con lo stile rituale.  
 
-        **Setup → Tabella → Policy → Debug → Pulizia**
+    Setup → Tabella → Policy → Debug → Pulizia
+
+**Preparazione dei file in root**
+
+1. Copia script: carica in root test-ping_supabase.php (versione aggiornata con file_exists e logging).
+2. Copia JSON: carica in root projects.json (la versione valida usata in produzione).
+3. Permessi file: imposta 644 per entrambi, così PHP/Apache possono leggerli. Nella Root, però, non c'è un .htaccess,       ma permette di eseguire questi file di test.
+
+**Esecuzione del test**
+
+    Apri da browser: visita
+
+    https://www.turladbrothers.com/test-ping_supabase.php
+
+    Output atteso:
+
+    A. Nessun errore a schermo (o messaggi di debug chiari se hai lasciato il check).
+
+    B. Creazione cartelle log_ok e log_errors (solo se non esistono).
+
+    C. Scrittura del file di log in una delle due cartelle.
+
+    D. Notifica Telegram con esito e percorso del log.
+
+**Chiusura e pulizia**
+
+1. Rimuovi i file di test: elimina test-ping_supabase.php e projects.json dalla root.
+
+2. Mantieni ordine: se non servono, elimina anche log_ok e log_errors in root (lo script le ricrea quando ti servono).
+
+3. Ripristina sicurezza: rimuovi l’eccezione <Files "test-ping_supabase.php"> dal .htaccess root. NOn occorre.
+
+4. Annota nel Grimonio: titolo, versione script, struttura projects.json, regole .htaccess usate, e il ciclo di verifica/esito.
