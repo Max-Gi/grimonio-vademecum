@@ -26,13 +26,28 @@
 
 8. Conserva anche i file .whl compatibili in H:\ComfyUI\checkpoints\wheels_locked\.
 
-9. Per verificare che la GPU sia attiva, esegui:
+    **WHEELS LOCKED – 2025-11-09**
+
+        torch-2.1.0+cu118-cp310-cp310-win_amd64.whl
+        torchvision-0.16.0+cu118-cp310-cp310-win_amd64.whl
+        torchaudio-2.1.0+cu118-cp310-cp310-win_amd64.whl
+
+        Compatibilità:
+        - Python 3.10
+        - CUDA 11.8
+        - Windows 64-bit
+        - GPU: GTX 1080 Ti
+
+    Archivio: H:\ComfyUI\checkpoints\wheels_locked\
+
+
+**Per verificare che la GPU sia attiva, esegui:**
 
     python -c "import torch; print(torch.cuda.is_available())"
 
     Se stampa True, la GPU è correttamente utilizzata.
 
-10. Per ripristinare l’ambiente in futuro, usa:
+1. Per ripristinare l’ambiente in futuro, usa:
 
     1. attivare l'ambiente:
 
@@ -51,7 +66,7 @@
         python -c "import torch; print(torch.cuda.is_available())"
 
 
-11. (Opzionale ma consigliato) Crea un file di log log_YYYY-MM-DD.txt con:
+2. (Opzionale ma consigliato) Crea un file di log log_YYYY-MM-DD.txt con:
 
     Versioni chiave (torch, torchvision, torchaudio)
 
@@ -59,23 +74,23 @@
 
     Una nota evocativa sul checkpoint (es. “Il portale GPU è stabile, il sigillo è compiuto”).
 
-📄 Esempio di log_2025-10-23.md
+    📄 Esempio di log_2025-10-23.md
 
-    # 📜 Log del checkpoint – 23 Ottobre 2025
+        # 📜 Log del checkpoint – 23 Ottobre 2025
 
-    ## Informazioni tecniche
-    - Ambiente: `comfyenv`
-    - GPU: NVIDIA GTX 1080 Ti
-    - CUDA: 11.8
-    - Torch: 2.4.1+cu118
-    - TorchVision: 0.19.1+cu118
-    - TorchAudio: 2.4.1+cu118
-    - Numpy: 1.26.4
-    - Python: 3.10
+        ## Informazioni tecniche
+        - Ambiente: `comfyenv`
+        - GPU: NVIDIA GTX 1080 Ti
+        - CUDA: 11.8
+        - Torch: 2.4.1+cu118
+        - TorchVision: 0.19.1+cu118
+        - TorchAudio: 2.4.1+cu118
+        - Numpy: 1.26.4
+        - Python: 3.10
 
-    ## Verifica GPU
-    ```bash
-    python -c "import torch; print(torch.cuda.is_available())"
+        ## Verifica GPU
+        ```bash
+        python -c "import torch; print(torch.cuda.is_available())"
 
 
 📂 Mini Ripasso DOS
