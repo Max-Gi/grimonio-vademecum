@@ -1,3 +1,18 @@
+
+📊 **Tabella compatibilità pacchetti essenziali (GTX 1080 Ti)**
+
+
+Pacchetto	  Versione consigliata	    Note rituali
+Torch	      2.0.1+cu118	            Compatibile con CUDA 11.8, stabile per 1080 Ti
+TorchVision	  0.15.2+cu118	            Allineata con Torch 2.0.1, richiede NumPy e Pillow
+NumPy	      1.26.4	                Evitare le versioni 2.x (causano errori “Numpy is not available”)
+Pillow	      11.3.0	                Necessario per salvataggio e gestione immagini
+Safetensors	  0.6.2	                    Per caricare modelli in formato .safetensors
+xformers	  0.0.20 (opzionale)	    Migliora memoria/velocità, ma da usare solo se stabile
+
+
+
+
 # 🛡️ Procedura Blindatura ComfyUI (GTX 1080 Ti + CUDA 11.8)
 
 1. Apri il prompt dei comandi.
@@ -51,7 +66,7 @@
 
     1. attivare l'ambiente:
 
-        call H:\ComfyUI\comfyenv\Scripts\activate.bat
+        call comfyenv\Scripts\activate.bat
 
     2. Vai nella cartella dove hai il file congelato:
 
